@@ -13,16 +13,16 @@ jobs:
       matrix:
         build_env:
           - tag: "23.05.4"
-            pkgarch: "mipsel_24kc"
-            target: "ramips"
-            subtarget: "mt7621"
-            vermagic: "71023f695d1597d994f06e42c25cbbdb"
+            pkgarch: "aarch64_cortex-a53"
+            target: "mediatek"
+            subtarget: "filogic"
+            vermagic: "129ccc9ecf700e21ecff22394a05f2be-r1"
 
     steps:
       - uses: actions/checkout@v4
         with:
           repository: openwrt/openwrt
-          ref: 715634e6d1443eacdcb84b04d1028c1564b08dbf
+          ref: 47370eb9ba2cf7021ac2bb208136c52ee85b6ba1
           fetch-depth: 0
 
       - name: Cache Tools and Kernel
